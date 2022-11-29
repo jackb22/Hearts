@@ -20,40 +20,26 @@ using namespace std;
 class Deck {
 
   public:
-    // defeault constructor
+    // default constructor
     Deck();
     // a constructor which calls the reset method
-    Deck(void reset());
+    Deck(bool fullDeck);
 
-    //destructor
+//destructor
     virtual ~Deck();
 
     //create sorted deck
     void createDeck();
 
     //shuffle deck
-    void shuffleDeck();
+    static void shuffleDeck();
 
     // a reset method
-     void reset();
+     void reset(bool fullDeck);
 
-     //random number generator
-     void randomNum(int rand());
-
-
-
-     // datastructure using a stack 
+     // datastructure using a stack
         stack<Card> deck;
-        //push cards into the stack
-        void pushCards();
-        
-        //pop cards from the stack
-        void popCards();
-        
-        //delete cards in stack
-        void deleteCards();
-  
-        
+
 
 
 };
