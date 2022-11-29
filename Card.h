@@ -21,7 +21,7 @@ class Card {
         //Ranking of cards
         enum Rank{Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
                 Jack, Queen, King, Ace}; //Declaring the rank of the card
-
+        enum Suit {Hearts, Diamonds, Clubs, Spades}; //Declaring the suit of the card
         static const string RankName; //variable for names of rank of cards
         static const int NumRanks;   //variable for number of ranks
 
