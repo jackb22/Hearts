@@ -4,66 +4,56 @@
 
 #include "Card.h"
 
-Card::Card() : rank(Two), suit(Spades) {} 
+const string Card::RankName = "23456789TJQKA";
+const string Card::SuitName = "SDCH";
+const int Card::numRanks = RankName.length();
+const int Card::numSuits = SuitName.length();
+const int Card::numCards = Card::numRanks * Card::numSuits;
+//const Card Card::TwoOfClubs (Card::Two, Card::Clubs);
+//const Card Card::QueenOfSpades (Card::Queen, Card::Spades);
+
+Card::Card() : rank(Two), suit(Spades) {}
 
 Card::Card(Rank r, Suit s) : rank(r), suit(s) {}
 
 Card::Card(string sCard){
-    switch(sCard[0]) {
-        case sCard[0] == Card::RankName[0]:
-            rank = Two;
-            break;
-        case sCard[0] == Card::RankName[1]:
-            rank = Three;
-            break;
-        case sCard[0] == Card::RankName[2]:
-            rank = Four;
-            break;
-        case sCard[0] == Card::RankName[3]:
-            rank = Five;
-            break;
-        case sCard[0] == Card::RankName[4]:
-            rank = Six;
-            break;
-        case sCard[0] == Card::RankName[5]:
-            rank = Seven;
-            break;
-        case sCard[0] == Card::RankName[6]:
-            rank = Eight;
-            break;
-        case sCard[0] == Card::RankName[7]:
-            rank = Nine;
-            break;
-        case sCard[0] == Card::RankName[8]:
-            rank = Ten;
-            break;
-        case sCard[0] == Card::RankName[9]: 
-            rank = Jack;
-            break;
-        case sCard[0] == Card::RankName[10]:
-            rank = Queen;
-            break;
-        case sCard[0] == Card::RankName[11]:    
-            rank = King;
-            break;
-        case sCard[0] == Card::RankName[12]:    
-            rank = Ace;
-            break;
-    }
-    switch(sCard[1]) {
-        case sCard[1] == Card::SuitName[0]:
-            suit = Spades;
-            break;
-        case sCard[1] == Card::SuitName[1]:
-            suit = Hearts;
-            break;
-        case sCard[1] == Card::SuitName[2]:
-            suit = Clubs;
-            break;
-        case sCard[1] == Card::SuitName[3]:
-            suit = Diamonds;
-            break;
-    }
+
+    if (sCard[0] == Card::RankName[0])
+        rank = Two;
+    else if (sCard[0] == Card::RankName[1])
+        rank = Three;
+    else if (sCard[0] == Card::RankName[2])
+        rank = Four;
+    else if (sCard[0] == Card::RankName[3])
+        rank = Five;
+    else if (sCard[0] == Card::RankName[4])
+        rank = Six;
+    else if (sCard[0] == Card::RankName[5])
+        rank = Seven;
+    else if (sCard[0] == Card::RankName[6])
+        rank = Eight;
+    else if (sCard[0] == Card::RankName[7])
+        rank = Nine;
+    else if (sCard[0] == Card::RankName[8])
+        rank = Ten;
+    else if (sCard[0] == Card::RankName[9])
+        rank = Jack;
+    else if (sCard[0] == Card::RankName[10])
+        rank = Queen;
+    else if (sCard[0] == Card::RankName[11])
+        rank = King;
+    else if (sCard[0] == Card::RankName[12])
+        rank = Ace;
+    if (sCard[1] == Card::SuitName[0])
+        suit = Spades;
+    else if (sCard[1] == Card::SuitName[1])
+        suit = Hearts;
+    else if (sCard[1] == Card::SuitName[2])
+        suit = Clubs;
+    else if (sCard[1] == Card::SuitName[3])
+        suit = Diamonds;
+
+
 }
 
 Card::~Card() {
@@ -99,14 +89,14 @@ bool Card::isValid(string s) {
         return false;
     }
 
-    for(int i = 0; i < Card::NumRanks; i++){
+    for(int i = 0; i < Card::numRanks; i++){
         if(s[0] == Card::RankName[i]){
             sRank = true;
-            break
+            break;
         }
     }
 
-    for (int i = 0; i < Card::NumSuits; i++){
+    for (int i = 0; i < Card::numSuits; i++){
         if(s[1] == Card::SuitName[i]){
             sSuit = true;
             break;
@@ -119,5 +109,10 @@ bool Card::isValid(string s) {
     else{
         return false;
     }
-} 
+}
 
+// Overloaded operators: output
+extern ostream& operator<< (ostream &out, const Card &c){
+    cout<<Card::RankName[c.getRank()]<<Card::SuitName[c.getSuit()];
+    return out;
+}

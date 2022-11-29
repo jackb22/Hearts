@@ -12,7 +12,7 @@ using namespace std;
 class Card {
 
     public:
-        enum Suit{Spade, Heart, Club, Diamond, None}; //none is used for Getcard method
+        enum Suit{Spades, Hearts, Clubs, Diamonds, None}; //none is used for Getcard method
 
         static const string SuitName; //variable for Suit name
         static const int numSuits; //variable for number of suits
@@ -21,9 +21,8 @@ class Card {
         //Ranking of cards
         enum Rank{Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
                 Jack, Queen, King, Ace}; //Declaring the rank of the card
-        enum Suit {Hearts, Diamonds, Clubs, Spades}; //Declaring the suit of the card
         static const string RankName; //variable for names of rank of cards
-        static const int NumRanks;   //variable for number of ranks
+        static const int numRanks;   //variable for number of ranks
 
         
 

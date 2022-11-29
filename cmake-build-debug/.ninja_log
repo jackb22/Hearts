@@ -1,0 +1,13 @@
+# ninja log v5
+0	120	1669757895567241615	CMakeFiles/Hearts.dir/Deck.cpp.o	ec641cddaa600a0a
+1	122	1669757895566742418	CMakeFiles/Hearts.dir/HumanPlayer.cpp.o	844d7da8cce7436
+1	122	1669757895567670109	CMakeFiles/Hearts.dir/Player.cpp.o	e61f7b4f6983587
+1	122	1669757895566712268	CMakeFiles/Hearts.dir/ComputerPlayer.cpp.o	7844b71e5f7fee01
+121	207	1669757895658928058	CMakeFiles/Hearts.dir/RandomPlayer.cpp.o	64576479e9e62539
+1	1764	1669757980682230892	CMakeFiles/Hearts.dir/main.cpp.o	bae34151e671dc0a
+3	2051	1669758779408750237	CMakeFiles/Hearts.dir/main.cpp.o	bae34151e671dc0a
+3	1243	1669758807228817441	CMakeFiles/Hearts.dir/Card.cpp.o	ab576dd74dd36701
+1243	1370	1669758807358721808	Hearts	c34d66cf6ef69f60
+3	1206	1669758938230699057	CMakeFiles/Hearts.dir/main.cpp.o	bae34151e671dc0a
+3	1227	1669758938254228707	CMakeFiles/Hearts.dir/Card.cpp.o	ab576dd74dd36701
+1227	1323	1669758938354805593	Hearts	c34d66cf6ef69f60
