@@ -4,7 +4,7 @@
 
 #include "Deck.h"
 #include "Card.h"
-
+using namespace std;
 //constructor and deconstruct method calls
  Deck::Deck(){}
 //deconstruct method
@@ -52,4 +52,13 @@ void Deck::reset(bool fullDeck) {
             deck[random] = temp;
         }
     }
+
+
+void Deck::print() const{
+    for(unsigned int i = 0; i < size(); i++){
+        cout<<*at(i)<<" ";
+    }
+    cout<<endl;
+}
+
 
