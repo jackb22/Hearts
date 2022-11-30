@@ -6,17 +6,17 @@
 #ifndef HEARTS_DECK_H
 #define HEARTS_DECK_H
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
+#include <vector>
 #include "Card.h"
 #include "Player.h"
-#include <stack>
+#include<algorithm>
+#include<random>
 
 using namespace std;
 
-class Deck {
+class Deck : private vector<Card*>  {
 
-  public:
+public:
     // default constructor
     Deck();
     // a constructor which calls the reset method
@@ -25,23 +25,34 @@ class Deck {
 //destructor
     virtual ~Deck();
 
-    //create sorted deck
-    static void createDeck();
-
     //shuffle deck
     static void shuffleDeck();
-
+    // print deck
     void print() const;
+    //caling my card print method with a for loop
 
     // a reset method
-     void reset(bool fullDeck);
-
-     // datastructure using a stack
+    void reset(bool fullDeck);
 
 
 
-    private:
-        stack<Card> deck;
+    // datastructure creation:
+    //calling vector methods to use
+    using vector<Card*>::begin;
+    using vector<Card*>::erase;
+    using vector<Card*>::clear;
+    using vector<Card*>::size;
+    using vector<Card*>::at;
+    using vector<Card*>::empty;
+    using vector<Card*>::push_back;
+
+
+
+
+
+
+
+
 };
 
 extern istream& operator>> (istream& in, Deck& deck);
