@@ -9,12 +9,11 @@
 #include <vector>
 #include "Card.h"
 #include "Player.h"
-#include<algorithm>
 #include<random>
 
 using namespace std;
 
-class Deck : private vector<Card*>  {
+class Deck: private  vector<Card*> {
 
 public:
     // default constructor
@@ -26,7 +25,7 @@ public:
     virtual ~Deck();
 
     //shuffle deck
-    static void shuffleDeck();
+    void shuffleDeck();
     // print deck
     void print() const;
     //caling my card print method with a for loop
@@ -37,14 +36,14 @@ public:
 
 
     // datastructure creation:
-    //calling vector methods to use
-    using vector<Card*>::begin;
-    using vector<Card*>::erase;
-    using vector<Card*>::clear;
-    using vector<Card*>::size;
-    using vector<Card*>::at;
-    using vector<Card*>::empty;
-    using vector<Card*>::push_back;
+//calling vector methods to use
+     using vector<Card*>::begin;
+     using vector<Card*>::erase;
+     using vector<Card*>::clear;
+     using vector<Card*>::size;
+     using vector<Card*>::at;
+     using vector<Card*>::empty;
+     using vector<Card*>::push_back;
 
 
 
