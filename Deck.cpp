@@ -4,9 +4,21 @@
 
 #include "Deck.h"
 #include "Card.h"
+
+const string RankName = "23456789TJQKA";
+const string SuitName = "SDCH";
+
 using namespace std;
 //constructor and deconstruct method calls
- Deck::Deck(){}
+ Deck::Deck(){
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 13; j++) {
+            string sCard = to_string(RankName[j]) + SuitName[i];
+            deck.push(Card(sCard));
+        }
+    }
+ }
+
 //deconstruct method
  Deck::~Deck(){
     while(!deck.empty()){
@@ -30,17 +42,17 @@ void Deck::reset(bool fullDeck) {
 
 
 
- //create deck
- void Deck::createDeck() {
-//create a new deck
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 13; j++) {
-            Card card(i, j);
-            deck.push(card);
-        }
-    }
-
-}
+// //create deck
+// void Deck::createDeck() {
+////create a new deck
+//    for (int i = 0; i < 4; i++) {
+//        for (int j = 0; j < 13; j++) {
+//            Card card(i, j);
+//            deck.push(card);
+//        }
+//    }
+//
+//}
 
 //shuffle deck
     void Deck::shuffleDeck(){
