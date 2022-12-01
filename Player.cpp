@@ -48,7 +48,7 @@ Card Player::PlayCard() {
     erase(begin());
     return card;
 }
-
+//pretty sure this wont work have not tested yet
 Card Player::PlayCard(const Card& card) {
     for (int i = 0; i < size(); i++){
         if (at(i)->getSuit() == card.getSuit() && at(i)->getRank() == card.getRank()){ //if the card is in the player's hand
