@@ -74,13 +74,14 @@ void Deck::shuffleDeck(){
 
  }
 
-
-
-void Deck::print() const{
+// print deck method.
+// prints card rank and card suit from Card Class 
+void Deck::print() const {
     for(unsigned int i = 0; i < size(); i++){
-        cout<<*at(i)<<" ";
+       cout << Card::RankName[(*this)[i]->getRank()] << Card::SuitName[(*this)[i]->getSuit()] << " ";
     }
     cout<<endl;
 }
+
 
 
