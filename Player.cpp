@@ -42,20 +42,12 @@ bool Player::isValid(Card::Suit suit, bool broken, const Card &card) {
 
 }
 
-//playcard
+//playcard return leading card if player is leading
 Card Player::PlayCard() {
-    Card card = *at(0);
-    erase(begin());
-    return card;
-}
-//pretty sure this wont work have not tested yet
-Card Player::PlayCard(const Card& card) {
-    for (int i = 0; i < size(); i++){
-        if (at(i)->getSuit() == card.getSuit() && at(i)->getRank() == card.getRank()){ //if the card is in the player's hand
-            erase(begin() + i);
-            return card;
-        }
-    }
-    return PlayCard();
+    return leader();
 }
 
+//playcard return following suit if player is following
+Card Player::PlayCard(Card c) {
+    return followingSuit(c);
+}
