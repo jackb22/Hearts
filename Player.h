@@ -12,7 +12,12 @@
 
 
 class Player : private vector <Card*> {
+private:
+    string Name;
 
+    //virtual functions for player / computer picking card
+    virtual Card leader() = 0;
+    virtual Card followingSuit(Card) = 0;
 
 
 public:
@@ -45,7 +50,7 @@ public:
 
         //playcard
         Card PlayCard();
-        Card PlayCard(const Card&);
+        Card PlayCard(const Card);
 
 };
 
