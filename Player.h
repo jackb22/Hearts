@@ -13,7 +13,7 @@
 
 class Player : private vector <Card*> {
 private:
-    string Name;
+   const string Name;
 
     //virtual functions for player / computer picking card
     virtual Card leader() = 0; // picking the leading card
