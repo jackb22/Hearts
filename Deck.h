@@ -13,7 +13,7 @@
 
 using namespace std;
 
-class Deck: private  vector<Card*> {
+class Deck: private  vector<Card*>  {
 
 public:
     // default constructor
@@ -33,6 +33,8 @@ public:
     // a reset method
     void reset(bool fullDeck);
 
+    //draw method
+
 
 
     // datastructure creation:
@@ -44,13 +46,6 @@ public:
      using vector<Card*>::at;
      using vector<Card*>::empty;
      using vector<Card*>::push_back;
-
-
-
-
-
-
-
 
 };
 
