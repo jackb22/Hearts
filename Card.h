@@ -59,6 +59,8 @@ class Card {
 ostream& operator<<(ostream& os, const Card& c);
 
 
-
+//overload operator for comparing cards
+// Overloaded operators: equlity
+extern bool operator== (const Card& c1, const Card& c2);
 
 #endif //HEARTS_CARD_H
