@@ -116,3 +116,13 @@ extern ostream& operator<< (ostream &out, const Card &c){
     cout<<Card::RankName[c.getRank()]<<Card::SuitName[c.getSuit()];
     return out;
 }
+
+//overload operator for comparing cards
+extern bool operator== (const Card& c1, const Card& c2){
+    if (c1.getRank() == c2.getRank() && c1.getSuit() == c2.getSuit()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
