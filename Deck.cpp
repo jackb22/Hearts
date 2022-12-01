@@ -4,66 +4,76 @@
 
 #include "Deck.h"
 #include "Card.h"
+#include<vector>
 
 const string RankName = "23456789TJQKA";
 const string SuitName = "SDCH";
 
 using namespace std;
 //constructor and deconstruct method calls
- Deck::Deck(){
+Deck::Deck(){
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; j++) {
             string sCard = to_string(RankName[j]) + SuitName[i];
-            deck.push(Card(sCard));
+            this->push_back(new Card(static_cast<Card::Rank>(j), static_cast<Card::Suit>(i)));
         }
-    }
- }
-
-//deconstruct method
- Deck::~Deck(){
-    while(!deck.empty()){
-        deck.pop();
-    }
-
- }
-
- //reset method
-void Deck::reset(bool fullDeck) {
-    //clears the deck
-    while (!deck.empty()) {
-        deck.pop();
     }
 }
 
-//construcor that calls the reset method to create a new deck
- Deck::Deck(bool fullDeck){
-    reset(fullDeck);
- }
+//deconstruct method
+Deck::~Deck(){
+    while(!empty()){
+        clear();
+    }
 
+}
 
-
-// //create deck
-// void Deck::createDeck() {
-////create a new deck
-//    for (int i = 0; i < 4; i++) {
-//        for (int j = 0; j < 13; j++) {
-//            Card card(i, j);
-//            deck.push(card);
-//        }
-//    }
-//
-//}
-
-//shuffle deck
-    void Deck::shuffleDeck(){
-        for (int i = 0; i < 52; i++){ //shuffle the deck
-            srand(time(0)); // seed random number generator
-            int random = rand() % 52; // random number between 0 and 51
-            Card temp = deck[i];
-            deck[i] = deck[random];
-            deck[random] = temp;
+//reset method
+void Deck::reset(bool fullDeck) {
+    //clears the deck
+    while(!empty()){
+        clear();
+    }
+    //create new deck
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 13; j++) {
+            string sCard = to_string(RankName[j]) + SuitName[i];
+            this->push_back(new Card(static_cast<Card::Rank>(j), static_cast<Card::Suit>(i)));
         }
     }
+
+    Deck::shuffleDeck(); // shuiffle deck function
+
+}
+
+//construcor that calls the reset method to create a new deck
+Deck::Deck(bool fullDeck){
+    reset(fullDeck);
+
+}
+
+
+
+
+
+//shuffle deck
+void Deck::shuffleDeck(){
+    //using time to seed the random number generator
+    srand((unsigned) time(nullptr));
+
+    // Get a random number
+    int random = rand();
+
+    //for loop for shuffling the deck based on size of deck and random number
+    for (int i = size() - 1; i > 0; i--) {
+        const int j = random % 52; //random number
+        Card* tmp = at(j); //temp card
+        at(j) = at(i); //swapping cards
+        at(i) = tmp; //swapping cards
+    }
+
+ }
+
 
 
 void Deck::print() const{
