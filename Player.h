@@ -7,14 +7,45 @@
 #include <iostream>
 #include <string>
 #include "Card.h"
+#include "Deck.h"
 
 
-class Player {
-    public:
-        Player();
-        Player(std::string name);
 
-        
+class Player : private vector <Card*> {
+
+
+
+public:
+    //Player's name
+    string Name;
+        //Constructor
+        Player(string Name);
+
+        //destructor
+        virtual ~Player();
+
+        //print method
+        void print();
+
+        virtual string getName();
+
+
+        // is valid function for checking if card is valid
+        bool isValid(Card::Suit suit, bool broken, const Card &card);
+
+
+
+        // vector members which will be used
+        using vector<Card*>::push_back;
+        using vector<Card*>::size;
+        using vector<Card*>::at;
+        using vector<Card*>::begin;
+        using vector<Card*>::empty;
+        using vector<Card*>::erase;
+
+        //playcard
+        Card PlayCard();
+        Card PlayCard(const Card&);
 
 };
 
