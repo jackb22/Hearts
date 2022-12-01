@@ -44,7 +44,7 @@ bool Player::isValid(Card::Suit suit, bool broken, const Card &card) {
 
 //playcard return leading card if player is leading
 Card Player::PlayCard() {
-    return leader();
+    return leadingCrd();
 }
 
 //playcard return following suit if player is following
