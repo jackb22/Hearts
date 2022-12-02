@@ -4,8 +4,8 @@
 
 #include "Card.h"
 
-const string Card::RankName = "23456789TJQKA";
-const string Card::SuitName = "SDCH";
+const std::string Card::RankName = "23456789TJQKA";
+const std::string Card::SuitName = "SDCH";
 const int Card::numRanks = RankName.length();
 const int Card::numSuits = SuitName.length();
 const int Card::numCards = Card::numRanks * Card::numSuits;
@@ -16,7 +16,7 @@ Card::Card() : rank(Two), suit(Spades) {}
 
 Card::Card(Rank r, Suit s) : rank(r), suit(s) {}
 
-Card::Card(string sCard){
+Card::Card(std::string sCard){
 
     if (sCard[0] == Card::RankName[0])
         rank = Two;
@@ -81,7 +81,7 @@ int Card::getValueHeart() const{
     }
 }
 
-bool Card::isValid(string s) {
+bool Card::isValid(std::string s) {
     bool sRank = false;
     bool sSuit = false;
 
@@ -112,8 +112,8 @@ bool Card::isValid(string s) {
 }
 
 // Overloaded operators: output
-extern ostream& operator<< (ostream &out, const Card &c) {
-    cout << Card::RankName[c.getRank()] << Card::SuitName[c.getSuit()];
+extern std::ostream& operator<< (std::ostream &out, const Card &c) {
+    std::cout << Card::RankName[c.getRank()] << Card::SuitName[c.getSuit()];
     return out;
 }
 
