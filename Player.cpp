@@ -8,7 +8,7 @@
 
 
 Player::Player(){
-    this->Name = "Player";
+    this->Name = Name;
 }
 
 
