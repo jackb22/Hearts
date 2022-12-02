@@ -16,6 +16,8 @@ private:
 public:
     //constructor
     HumanPlayer( const std::string Name);
+
+
 };
 
 

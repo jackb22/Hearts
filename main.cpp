@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Card.h"
+#include "player.h"
 #include "Deck.h"
 #include "HumanPlayer.h"
 
@@ -17,7 +18,14 @@ void deckTest() {
 }
 
 void humanPlayerTest() {
-    HumanPlayer p1 = HumanPlayer("Player");
+    std::vector<Player*> Player{'Jack'};
+    Player[0] = new HumanPlayer("Jack");
+
+
+
+
+
+
 
 }
 
@@ -29,6 +37,6 @@ int main() {
     std::cout << Card();
     std::cout << "Hello, World!" << std::endl;
     cardTest();
-    deckTest();                                
+    deckTest();
     return 0;
 }

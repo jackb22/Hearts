@@ -9,7 +9,7 @@
 extern Card leadingTrmpCard; //card object for leading trump card
 
 //human player constructor
-HumanPlayer::HumanPlayer(std::string Name) : Player(Name) {}
+ HumanPlayer::HumanPlayer(std::string Name) : Player(Name) {}
 
 //lets player pick any card to lead in the pile
 Card HumanPlayer::leadingCrd()  {
