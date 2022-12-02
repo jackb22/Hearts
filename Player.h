@@ -12,19 +12,23 @@
 
 
 class Player : private vector <Card*> {
+
 private:
-   const string Name;
 
     //virtual functions for player / computer picking card
     virtual Card leadingCrd() = 0; // picking the leading card
     virtual Card followingSuit(Card) = 0;  // picking the following suit matching card
     virtual Card  noSuit() = 0;  //picks any card if no matching suit is available
 
+
+
+protected:
+    string Name;
 public:
     //Player's name
-    string Name;
+
         //Constructor
-        Player(string Name);
+        Player( string Name);
 
         //destructor
         virtual ~Player();
@@ -52,7 +56,3 @@ public:
         Card PlayCard();
         Card PlayCard(const Card);
 
-};
-
-
-#endif //HEARTS_PLAYER_H
