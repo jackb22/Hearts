@@ -1,8 +1,12 @@
+// Jack Bennett 0370668//
+
+
+
 #include <iostream>
 #include "Card.h"
-#include "player.h"
+//#include "player.h"
 #include "Deck.h"
-#include "HumanPlayer.h"
+//#include "HumanPlayer.h"
 
 
 void cardTest() {
@@ -18,12 +22,9 @@ void deckTest() {
 }
 
 void humanPlayerTest() {
-    std::vector<Player*> Player{'Jack'};
-    Player[0] = new HumanPlayer("Jack");
+  //HumanPlayer h1 = new HumanPlayer("Jack");
 
-
-
-
+// HumanPlayer;
 
 
 

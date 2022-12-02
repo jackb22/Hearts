@@ -1,5 +1,5 @@
 ////
-//// Created by Jack Bennett on 2022-11-29.
+// Jack Bennett 0370668//
 ////
 //
 #ifndef HEARTS_PLAYER_H
@@ -15,8 +15,7 @@ class Player : private std::vector <Card*> {
 
 private:
 
-    //virtual functions for player / computer picking card
-    virtual Card leadingCrd() = 0; // picking the leading card
+    // picking the leading card
     virtual Card followingSuit(Card) = 0;  // picking the following suit matching card
     virtual Card  noSuit() = 0;  //picks any card if no matching suit is available
 
@@ -58,17 +57,8 @@ public:
         Card PlayCard(const Card);
 
 
-
-
-
-
-
-
-
-
-
-
-
+//virtual functions for player / computer picking card
+virtual Card leadingCrd() = 0;
 };
 
 

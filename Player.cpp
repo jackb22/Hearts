@@ -1,5 +1,5 @@
 ////
-//// Created by Jack Bennett on 2022-11-29.
+////// Jack Bennett 0370668//
 ////
 //
 #include "Player.h"
@@ -7,9 +7,9 @@
 #include <utility>
 
 
-Player::Player(){
-    this->Name = "Player";
-}
+//Player::Player(){
+//    this->Name = Name;
+//}
 
 
 Player::Player(std::string Name){

@@ -1,10 +1,9 @@
 ////
-//// Created by Jack Bennett on 2022-11-29.
-////
-//
-//
+//Jack Bennett 0370668//
+
+
 #include "HumanPlayer.h"
-#include "Card.h"
+
 
 extern Card leadingTrmpCard; //card object for leading trump card
 
@@ -144,10 +143,7 @@ Card HumanPlayer::followingSuit(Card card) {
             }
         }
     }
-
-
-
-}
+ }
 //
 //
 //

@@ -1,6 +1,4 @@
-//
-// Created by Jack Bennett on 2022-11-29.
-//
+// Jack Bennett 0370668//
 
 #include "Card.h"
 
