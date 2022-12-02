@@ -43,13 +43,13 @@ public:
 
     // datastructure creation:
 //calling vector methods to use
-     using vector<Card*>::begin;
-     using vector<Card*>::erase;
-     using vector<Card*>::clear;
-     using vector<Card*>::size;
-     using vector<Card*>::at;
-     using vector<Card*>::empty;
-     using vector<Card*>::push_back;
+     using std::vector<Card*>::begin;
+     using std::vector<Card*>::erase;
+     using std::vector<Card*>::clear;
+     using std::vector<Card*>::size;
+     using std::vector<Card*>::at;
+     using std::vector<Card*>::empty;
+     using std::vector<Card*>::push_back;
 
 };
 
