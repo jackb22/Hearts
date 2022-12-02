@@ -16,7 +16,7 @@ const std::string SuitName = "SDCH";
 Deck::Deck(){
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; j++) {
-            string sCard = std::to_string(RankName[j]) + SuitName[i];
+            std::string sCard = std::to_string(RankName[j]) + SuitName[i];
             this->push_back(new Card(static_cast<Card::Rank>(j), static_cast<Card::Suit>(i)));
         }
     }
@@ -79,12 +79,7 @@ void Deck::print() const {
     for(unsigned int i = 0; i < size(); i++){
        std::cout << Card::RankName[(*this)[i]->getRank()] << Card::SuitName[(*this)[i]->getSuit()] << " ";
     }
-    std::cout<<endl;
+    std::cout<<std::endl;
 }
-
-
-
-
-
 
 
