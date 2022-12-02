@@ -17,7 +17,7 @@ void deckTest() {
 }
 
 void humanPlayerTest() {
-//    HumanPlayer p1 = HumanPlayer("Player");
+    HumanPlayer p1 = HumanPlayer("Player");
 
 }
 
@@ -29,6 +29,6 @@ int main() {
     std::cout << Card();
     std::cout << "Hello, World!" << std::endl;
     cardTest();
-    deckTest();
+    deckTest();                                
     return 0;
 }
