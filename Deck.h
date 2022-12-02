@@ -12,7 +12,8 @@
 #include<random>
 
 
-class Deck: private  vector<Card*>  {
+
+class Deck: private  std::vector<Card*>  {
 
 public:
     // default constructor
@@ -36,6 +37,10 @@ public:
 
 
 
+
+
+
+
     // datastructure creation:
 //calling vector methods to use
      using vector<Card*>::begin;
@@ -48,6 +53,6 @@ public:
 
 };
 
-extern istream& operator>> (istream& in, Deck& deck);
+extern std::istream& operator>> (std::istream& in, Deck& deck);
 
 #endif //HEARTS_DECK_H
