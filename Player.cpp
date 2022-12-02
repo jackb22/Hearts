@@ -7,7 +7,9 @@
 #include <utility>
 
 
-
+Player::Player(){
+    this->Name = "Player";
+}
 
 
 Player::Player(std::string Name){

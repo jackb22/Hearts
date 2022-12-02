@@ -1,23 +1,29 @@
 #include <iostream>
 #include "Card.h"
 #include "Deck.h"
+#include "HumanPlayer.h"
 
 
 void cardTest() {
     Card c1 = Card();
     Card c2 = Card("QH");
-//    Card c3 = Card(Card::Rank[5], Card::Suit[2]);
-
     std::cout << c1 << "\n";
     std::cout << c2 << "\n";
-//    std::cout << c3 << "\n";
 }
 
 void deckTest() {
     Deck d1 = Deck();
-
     d1.print();
 }
+
+void humanPlayerTest() {
+//    HumanPlayer p1 = HumanPlayer("Player");
+
+}
+
+void computerPlayerTest() {}
+
+void randomPlayerTest() {}
 
 int main() {
     std::cout << Card();
