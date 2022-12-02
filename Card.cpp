@@ -112,8 +112,8 @@ bool Card::isValid(string s) {
 }
 
 // Overloaded operators: output
-extern ostream& operator<< (ostream &out, const Card &c){
-    cout<<Card::RankName[c.getRank()]<<Card::SuitName[c.getSuit()];
+extern ostream& operator<< (ostream &out, const Card &c) {
+    cout << Card::RankName[c.getRank()] << Card::SuitName[c.getSuit()];
     return out;
 }
 
