@@ -5,18 +5,13 @@
 
 #include "Deck.h"
 #include "Card.h"
-#include "Card.cpp"
 #include<vector>
-
-const std::string RankName = "23456789TJQKA";
-const std::string SuitName = "SDCH";
-
 
 //constructor and deconstruct method calls
 Deck::Deck(){
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; j++) {
-            std::string sCard = std::to_string(RankName[j]) + SuitName[i];
+            std::string sCard = std::to_string(Card::RankName[j]) + Card::SuitName[i];
             this->push_back(new Card(static_cast<Card::Rank>(j), static_cast<Card::Suit>(i)));
         }
     }
@@ -39,7 +34,7 @@ void Deck::reset(bool fullDeck) {
     //create new deck
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 13; j++) {
-            std::string sCard = std::to_string(RankName[j]) + SuitName[i];
+            std::string sCard = std::to_string(Card::RankName[j]) + Card::SuitName[i];
             this->push_back(new Card(static_cast<Card::Rank>(j), static_cast<Card::Suit>(i)));
         }
     }
