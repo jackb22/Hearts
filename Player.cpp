@@ -3,13 +3,18 @@
 ////
 //
 #include "Player.h"
-
 #include <utility>
 
+
+
+//Player::Player(){
+//   this->Name = Name;
+//}
 
 //Player::Player(){
 //    this->Name = Name;
 //}
+
 
 
 Player::Player(std::string Name){

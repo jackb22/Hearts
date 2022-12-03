@@ -26,12 +26,12 @@ protected:
 public:
     //Player's name
         //default constructor
-        Player();
+       Player();
         //Constructor
         Player( std::string Name);
 
         //destructor
-        virtual ~Player();
+        //virtual ~Player();
 
         //print method
         void print();
@@ -54,7 +54,7 @@ public:
 
         //playcard
         Card PlayCard();
-        Card PlayCard(const Card);
+        Card PlayCard( Card);
 
 
 //virtual functions for player / computer picking card

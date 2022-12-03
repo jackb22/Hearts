@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "Card.h"
 
+
 class HumanPlayer : public Player {
 private:
     //virtual functions for player / computer picking card
@@ -16,7 +17,7 @@ private:
 
 public:
     //constructor
-    explicit HumanPlayer(  std::string Name);
+    HumanPlayer( std::string Name);
 
 
 };

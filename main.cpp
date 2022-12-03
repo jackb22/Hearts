@@ -4,9 +4,12 @@
 
 #include <iostream>
 #include "Card.h"
-//#include "player.h"
+
+#include "Player.h"
 #include "Deck.h"
-//#include "HumanPlayer.h"
+#include "Game.h"
+#include "Card.h"
+#include "HumanPlayer.h"
 
 
 void cardTest() {
@@ -33,6 +36,12 @@ void humanPlayerTest() {
 void computerPlayerTest() {}
 
 void randomPlayerTest() {}
+
+void GameTest() {
+    //Game:Game();
+}
+
+
 
 int main() {
     std::cout << Card();
